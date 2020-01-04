@@ -24,14 +24,14 @@ for(long long int i=0;i<n;i++){
 }
 temp=head;
 struct Node* prev=NULL;
-struct Node* right= temp->next;
+struct Node* right=temp->next;
 while(right!=NULL){
     temp->next = prev;
     prev=temp;
     temp=right;
     right=temp->next;
 }
-temp->next=prev;
+temp->next = prev;
 head=temp;
 while(temp!=NULL){
     printf("%d ",temp->data);
